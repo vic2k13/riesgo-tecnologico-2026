@@ -11,6 +11,7 @@ MENU = {
     'Hojalateria': ['Pintura', 'Abolladuras']
 }
 
+
 #{% url 'agencia:inicio' %}
 def inicio(request):
     return render(request, 'agencia/inicio.html', {'menu_a': MENU.keys()})
@@ -33,11 +34,11 @@ def seccion(request, servicio):
 def obtener_html_subtema(subtema):
     match subtema:
         case 'Nuevos':
-            return 'agencia/detalle.html'
+            return 'agencia/ventas/nuevos.html'
         case 'Seminuevos':
-            return 'agencia/algun.html'
+            return 'agencia/ventas/seminuevos.html'
         case 'Garantias':
-            return 'agencia/algun.html'
+            return 'agencia/ventas/garantias.html'
         case 'Mantenimiento':
             return 'agencia/mantenimiento.html'
         case 'Motor':
@@ -67,6 +68,7 @@ def detalle(request, servicio, subtema):
         'servicio_activo': servicio,
         'opciones_b': opciones_b,
         'subtema_activo': subtema,
+        'nuevos': V_NUEVOS
     }
 
     #return render(request, 'agencia/detalle.html', contexto)

@@ -1,0 +1,41 @@
+{% extends 'agencia/base.html' %}
+<!-- Contenido Principal -->
+
+
+{% block content %}
+<div class="container my-5">
+        <h1 class="text-center mb-4">Autos Seminuevos en Venta</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <!-- Auto 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Mazda+CX-5" class="card-img-top" alt="Mazda CX-5 2023">
+                    <div class="card-body">
+                        <h5 class="card-title">Mazda CX-5 2023</h5>
+                        <p class="card-text">SUV impecable, tracción AWD, sensores de reversa y cámara 360°.</p>
+                        <h6 class="text-primary fs-4 fw-bold">$28,900 MXN</h6>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="#" class="btn btn-primary w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://placehold.co/600x400/c0392b/ffffff?text=Volkswagen+Golf" class="card-img-top" alt="Volkswagen Golf GTI 2019">
+                    <div class="card-body">
+                        <h5 class="card-title">Volkswagen Golf GTI 2019</h5>
+                        <p class="card-text">Edición especial GTI, transmisión DSG, rines de aluminio 18".</p>
+                        <h6 class="text-primary fs-4 fw-bold">$22,500 MXN</h6>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="#" class="btn btn-primary w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
