@@ -1,0 +1,84 @@
+{% extends 'agencia/base.html' %}
+
+{% block content %}
+    <!-- Pauta de Mantenimiento -->
+    <div class="section-title">Pauta de Mantenimiento Preventivo</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Intervalo</th>
+                <th>Servicio / Componentes</th>
+                <th>Objetivo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>10,000 km</strong></td>
+                <td>Aceite, filtro de motor y presión de neumáticos.</td>
+                <td>Prevenir desgaste y optimizar combustible.</td>
+            </tr>
+            <tr>
+                <td><strong>30,000 km</strong></td>
+                <td>Filtro de cabina, líquido de frenos y alineación.</td>
+                <td>Garantizar pureza de aire y frenado seguro.</td>
+            </tr>
+            <tr>
+                <td><strong>60,000 km</strong></td>
+                <td>Bujías, refrigerante y pastillas de freno.</td>
+                <td>Eficiencia de encendido y enfriamiento.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Inspección Diagnóstica (Semaforizada) -->
+    <div class="section-title">Estado Actual del Vehículo</div>
+    <div class="status-grid">
+        <div class="status-card ok">
+            <h4>🟢 Estado Óptimo</h4>
+            <ul>
+                <li>Luces exteriores</li>
+                <li>Nivel de limpiaparabrisas</li>
+                <li>Batería (12.6V)</li>
+            </ul>
+        </div>
+        <div class="status-card warning">
+            <h4>🟡 Atención Próxima</h4>
+            <ul>
+                <li>Pastillas delanteras (35% vida)</li>
+                <li>Desgaste leve en neumáticos</li>
+            </ul>
+        </div>
+        <div class="status-card danger">
+            <h4>🔴 Reemplazo Urgente</h4>
+            <ul>
+                <li>Fuga en manguera de refrigerante</li>
+                <li>Filtro de aire saturado</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Presupuesto -->
+    <div class="section-title">Presupuesto Sugerido</div>
+    <div class="budget-box">
+        <div class="budget-row">
+            <span>Cambio de Aceite Sintético + Filtro</span>
+            <span>$85.00</span>
+        </div>
+        <div class="budget-row">
+            <span>Manguera de Refrigerante (Original OEM)</span>
+            <span>$45.00</span>
+        </div>
+        <div class="budget-row">
+            <span>Mano de Obra y Diagnóstico Computarizado</span>
+            <span>$60.00</span>
+        </div>
+        <div class="budget-row total">
+            <span>Total Estimado</span>
+            <span>$190.00</span>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        Este presupuesto tiene una validez de 15 días. Gracias por su confianza.
+    </div>
+{% endblock %}
