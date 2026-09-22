@@ -45,15 +45,15 @@ def obtener_html_subtema(subtema):
         case 'Frenos':
             return 'agencia/algun.html'
         case 'Aceites':
-            return 'agencia/algun.html'
+            return 'agencia/aceites.html'
         case 'Filtros':
-            return 'agencia/algun.html'
+            return 'agencia/filtros.html'
         case 'Llantas':
-            return 'agencia/algun.html'
+            return 'agencia/llantas.html'
         case 'Pintura':
-            return 'agencia/algun.html'
+            return 'agencia/pinturas.html'
         case 'Abolladuras':
-            return 'agencia/algun.html'
+            return 'agencia/abolladuras.html'
         case _:
             return 'agencia/error.html'
 
@@ -69,9 +69,9 @@ def detalle(request, servicio, subtema):
         'subtema_activo': subtema,
     }
 
-    return render(request, 'agencia/detalle.html', contexto)
+    #return render(request, 'agencia/detalle.html', contexto)
     #Actividad
-    '''
+    
     respuesta_html = obtener_html_subtema(subtema)
     return render(request, respuesta_html, contexto)
-    '''
+    
