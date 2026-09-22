@@ -69,9 +69,9 @@ def detalle(request, servicio, subtema):
         'subtema_activo': subtema,
     }
 
-    return render(request, 'agencia/detalle.html', contexto)
+    #return render(request, 'agencia/detalle.html', contexto)
     #Actividad
-    '''
+    
     respuesta_html = obtener_html_subtema(subtema)
     return render(request, respuesta_html, contexto)
-    '''
+    
