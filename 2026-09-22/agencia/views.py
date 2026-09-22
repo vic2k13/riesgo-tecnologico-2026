@@ -67,8 +67,7 @@ def detalle(request, servicio, subtema):
         'menu_a': MENU.keys(),
         'servicio_activo': servicio,
         'opciones_b': opciones_b,
-        'subtema_activo': subtema,
-        'nuevos': V_NUEVOS
+        'subtema_activo': subtema
     }
 
     #return render(request, 'agencia/detalle.html', contexto)
