@@ -39,11 +39,11 @@ def obtener_html_subtema(subtema):
         case 'Garantias':
             return 'agencia/algun.html'
         case 'Mantenimiento':
-            return 'agencia/algun.html'
+            return 'agencia/mantenimiento.html'
         case 'Motor':
-            return 'agencia/algun.html'
+            return 'agencia/motor.html'
         case 'Frenos':
-            return 'agencia/algun.html'
+            return 'agencia/frenos.html'
         case 'Aceites':
             return 'agencia/algun.html'
         case 'Filtros':
