@@ -1,0 +1,78 @@
+{% extends 'agencia/base.html' %}
+
+{% block content %}
+    <!-- Inspección del Sistema de Frenos -->
+    <div class="section-title">Inspección del Sistema de Frenos</div>
+
+    <!-- Medición de Vida Útil de Pastillas/Balatas -->
+    <div class="brake-grid">
+        <div class="brake-card">
+            <div class="axle-title">Delantero Izquierdo</div>
+            <div class="thickness warning">3.5 mm</div>
+            <span class="status-tag tag-alert">30% Vida Útil</span>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 30%; background-color: var(--warning);"></div>
+            </div>
+        </div>
+
+        <div class="brake-card">
+            <div class="axle-title">Delantero Derecho</div>
+            <div class="thickness warning">3.5 mm</div>
+            <span class="status-tag tag-alert">30% Vida Útil</span>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 30%; background-color: var(--warning);"></div>
+            </div>
+        </div>
+
+        <div class="brake-card">
+            <div class="axle-title">Trasero Izquierdo</div>
+            <div class="thickness good">7.0 mm</div>
+            <span class="status-tag tag-good">70% Vida Útil</span>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 70%; background-color: var(--success);"></div>
+            </div>
+        </div>
+
+        <div class="brake-card">
+            <div class="axle-title">Trasero Derecho</div>
+            <div class="thickness good">7.0 mm</div>
+            <span class="status-tag tag-good">70% Vida Útil</span>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 70%; background-color: var(--success);"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diagnóstico de Componentes Hidráulicos y Mecánicos -->
+    <table style="margin-bottom: 25px;">
+        <thead>
+            <tr>
+                <th>Componente</th>
+                <th>Medición / Evaluación</th>
+                <th>Diagnóstico del Técnico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Discos de Freno Delanteros</strong></td>
+                <td>Grosor: 22.1 mm (Mín: 20.0 mm)</td>
+                <td>Superficie con cristalización leve. Admite rectificado.</td>
+            </tr>
+            <tr>
+                <td><strong>Líquido de Frenos (DOT 4)</strong></td>
+                <td>Humedad: 3.8% (Límite: 3.0%)</td>
+                <td>🔴 <strong>Contaminado:</strong> Requiere purga y reemplazo de fluido.</td>
+            </tr>
+            <tr>
+                <td><strong>Mangueras y Calipers</strong></td>
+                <td>Inspección de presión/fugas</td>
+                <td>Sin fugas de líquido ni agarrotamiento en pistones.</td>
+            </tr>
+            <tr>
+                <td><strong>Freno de Mano / Estacionamiento</strong></td>
+                <td>Prueba de tensión e inmovilización</td>
+                <td>Ajuste correcto en pendiente de 15°. Operativo.</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'agencia/base.html' %}
+<!-- Contenido Principal -->
+
+
+{% block content %}
+<div class="container my-5">
+        <h1 class="text-center mb-4">Autos en Venta</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            
+            <!-- Auto 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://placehold.co/600x400/2b3e50/ffffff?text=Toyota+Corolla" class="card-img-top" alt="Toyota Corolla 2022">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Corolla 2022</h5>
+                        <p class="card-text">Excelente estado, único dueño, 25,000 km. Mantenimiento al día.</p>
+                        <h6 class="text-primary fs-4 fw-bold">$18,500 MXN</h6>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="#" class="btn btn-primary w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://placehold.co/600x400/34495e/ffffff?text=Honda+Civic" class="card-img-top" alt="Honda Civic 2021">
+                    <div class="card-body">
+                        <h5 class="card-title">Honda Civic 2021</h5>
+                        <p class="card-text">Transmisión automática, motor 2.0L, pantalla táctil con Apple CarPlay.</p>
+                        <h6 class="text-primary fs-4 fw-bold">$20,200 MXN</h6>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="#" class="btn btn-primary w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://placehold.co/600x400/16a085/ffffff?text=Ford+Mustang" class="card-img-top" alt="Ford Mustang GT 2020">
+                    <div class="card-body">
+                        <h5 class="card-title">Ford Mustang GT 2020</h5>
+                        <p class="card-text">Motor V8 5.0L, asientos de piel, paquete deportivo completo.</p>
+                        <h6 class="text-primary fs-4 fw-bold">$35,000 MXN</h6>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="#" class="btn btn-primary w-100">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

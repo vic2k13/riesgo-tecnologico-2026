@@ -1,0 +1,59 @@
+{% extends 'agencia/base.html' %}
+
+{% block content %}
+    <!-- Diagnóstico de Salud del Motor -->
+    <div class="section-title">Diagnóstico y Rendimiento del Motor</div>
+
+    <div class="engine-grid">
+        <div class="engine-card">
+            <div class="label">Compresión de Cilindros</div>
+            <div class="metric">145 PSI</div>
+            <span class="status-tag tag-good">Dentro de Norma</span>
+        </div>
+
+        <div class="engine-card">
+            <div class="label">Presión de Aceite</div>
+            <div class="metric">35 PSI</div>
+            <span class="status-tag tag-good">Óptimo en Caliente</span>
+        </div>
+
+        <div class="engine-card">
+            <div class="label">Temperatura Operativa</div>
+            <div class="metric">92 °C</div>
+            <span class="status-tag tag-good">Normal</span>
+        </div>
+
+        <div class="engine-card">
+            <div class="label">Análisis de Emisiones</div>
+            <div class="metric">Elevado</div>
+            <span class="status-tag tag-alert">Revisar Mezcla</span>
+        </div>
+    </div>
+
+    <table style="margin-bottom: 25px;">
+        <thead>
+            <tr>
+                <th>Sistema del Motor</th>
+                <th>Prueba Realizada</th>
+                <th>Hallazgo / Diagnóstico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Inyección de Combustible</strong></td>
+                <td>Escaneo de códigos (DTC)</td>
+                <td>Sin códigos de falla activos en memoria de la ECU.</td>
+            </tr>
+            <tr>
+                <td><strong>Sistema de Encendido</strong></td>
+                <td>Inspección de bujías y bobinas</td>
+                <td>Desgaste moderado en electrodos; se recomienda reemplazo preventivo.</td>
+            </tr>
+            <tr>
+                <td><strong>Estanqueidad y Empaques</strong></td>
+                <td>Inspección visual y presión</td>
+                <td>Sudoración leve de aceite en la junta de tapa de punterías.</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
