@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Módulos del auditor
+    'usuarios.apps.UsuariosConfig',
+    'equipos.apps.EquiposConfig',
+    'activos_red.apps.ActivosRedConfig',
+    'auditorias.apps.AuditoriasConfig',
+    'reportes.apps.ReportesConfig',
+    'panel.apps.PanelConfig',
+
 ]
 
 MIDDLEWARE = [
