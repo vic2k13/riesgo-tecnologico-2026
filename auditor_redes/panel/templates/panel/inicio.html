@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel de Inicio - Auditor de Redes{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+            <div class="container-fluid py-2">
+                <h1 class="display-5 fw-bold text-primary">Bienvenido al Auditor de Redes</h1>
+                <p class="col-md-8 fs-4 text-secondary">
+                    Plataforma para la gestión de equipos, inventario de activos de red, ejecución de auditorías y emisión de reportes.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title text-dark">Activos de Red</h5>
+                <p class="card-text text-muted">Gestión del inventario de dispositivos, direcciones IP y segmentos autorizados.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title text-dark">Auditorías</h5>
+                <p class="card-text text-muted">Programación y seguimiento de la ejecución de pruebas sobre la red.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title text-dark">Reportes</h5>
+                <p class="card-text text-muted">Consulta de métricas, historial e informes de resultados.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
