@@ -1,0 +1,24 @@
+<section id="resumen">
+    <div class="encabezado-seccion">
+        <div><p class="antetitulo">TU ACTIVIDAD, EN UN SOLO LUGAR</p><h1>Resumen</h1><p class="descripcion">Hola, {{ usuario_panel.saludo }}. Este es el panorama de tus auditorías.</p></div>
+        <span class="fecha-panel"><svg class="icono" aria-hidden="true"><use href="#icono-reloj"></use></svg>20 de octubre de 2026</span>
+    </div>
+    <div class="estadisticas">
+        <article class="estadistica"><div class="estadistica-superior"><span>Auditorías ejecutadas</span><span class="fondo-icono tono-azul"><svg class="icono" aria-hidden="true"><use href="#icono-lista"></use></svg></span></div><strong class="cifra">12</strong><span class="detalle-estadistica">Tu actividad acumulada</span></article>
+        <article class="estadistica"><div class="estadistica-superior"><span>Completadas</span><span class="fondo-icono tono-verde"><svg class="icono" aria-hidden="true"><use href="#icono-check"></use></svg></span></div><strong class="cifra">8</strong><span class="detalle-estadistica">Revisadas por tu responsable</span></article>
+        <article class="estadistica"><div class="estadistica-superior"><span>En revisión</span><span class="fondo-icono tono-amarillo"><svg class="icono" aria-hidden="true"><use href="#icono-reloj"></use></svg></span></div><strong class="cifra">3</strong><span class="detalle-estadistica">Pendientes de revisión</span></article>
+        <article class="estadistica"><div class="estadistica-superior"><span>En progreso</span><span class="fondo-icono tono-violeta"><svg class="icono" aria-hidden="true"><use href="#icono-actividad"></use></svg></span></div><strong class="cifra">1</strong><span class="detalle-estadistica">Auditoría en curso</span></article>
+    </div>
+</section>
+<section class="bloque" aria-labelledby="titulo-herramientas">
+    <div class="titulo-bloque"><h2 id="titulo-herramientas">Herramientas de auditoría</h2><a href="{% url 'seccion' seccion='herramientas' %}">Ver herramientas <span aria-hidden="true">→</span></a></div>
+    <div class="rejilla-dos">
+        <a class="acceso-herramienta" href="{% url 'seccion' seccion='herramientas' %}?subseccion=puertos#puertos"><span class="fondo-icono tono-azul icono-grande"><svg class="icono" aria-hidden="true"><use href="#icono-puertos"></use></svg></span><div><h3>Verificación de puertos</h3><p>Consulta los servicios de un dispositivo.</p></div><span class="flecha-acceso" aria-hidden="true">→</span></a>
+        <a class="acceso-herramienta" href="{% url 'seccion' seccion='herramientas' %}?subseccion=dispositivos#dispositivos"><span class="fondo-icono tono-violeta icono-grande"><svg class="icono" aria-hidden="true"><use href="#icono-red"></use></svg></span><div><h3>Dispositivos conectados</h3><p>Conoce los equipos presentes en la red.</p></div><span class="flecha-acceso" aria-hidden="true">→</span></a>
+    </div>
+</section>
+<div class="rejilla-resumen bloque">
+    <section id="actividad" class="tarjeta tarjeta-tabla" aria-labelledby="titulo-actividad"><div class="cabecera-tarjeta"><h2 id="titulo-actividad">Actividad reciente</h2><a href="{% url 'seccion' seccion='historial' %}">Ver historial <span aria-hidden="true">→</span></a></div>{% include 'panel/partials/tabla_historial.html' %}</section>
+    <section class="tarjeta resumen-equipo" aria-labelledby="titulo-equipo"><div class="cabecera-tarjeta"><h2 id="titulo-equipo">Mi equipo</h2><svg class="icono texto-secundario" aria-hidden="true"><use href="#icono-equipo"></use></svg></div><div class="equipo-cuerpo"><span class="estado estado-azul">{{ equipo_nombre }}</span><h3>Un equipo, una misma red.</h3><p class="texto-secundario">Formas parte de un equipo de {{ integrantes|length }} integrantes.</p><div class="responsable-resumen"><span class="avatar avatar-violeta"><svg class="icono" aria-hidden="true"><use href="#icono-usuario"></use></svg></span><div><strong>Por asignar</strong><span class="texto-secundario texto-pequeno">Auditor responsable</span></div></div><a class="boton boton-contorno ancho-completo" href="{% url 'seccion' seccion='mi-equipo' %}">Ver integrantes <span aria-hidden="true">→</span></a></div></section>
+</div>
+<div class="nota-documentacion"><span class="fondo-icono tono-azul"><svg class="icono" aria-hidden="true"><use href="#icono-libro"></use></svg></span><div><strong>Acompaña tus auditorías con buenas prácticas</strong><p>Consulta las guías y el material de referencia antes de comenzar.</p></div><a href="{% url 'seccion' seccion='documentacion' %}">Ir a documentación <span aria-hidden="true">→</span></a></div>

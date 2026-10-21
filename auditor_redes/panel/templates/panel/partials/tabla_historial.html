@@ -1,0 +1,16 @@
+<div class="tabla-contenedor">
+    <table>
+        <caption class="solo-lectores">Auditorías de ejemplo de {{ usuario_panel.nombre }}</caption>
+        <thead><tr><th scope="col">Auditoría</th><th scope="col">Herramienta</th><th scope="col">Fecha</th><th scope="col">Estado</th></tr></thead>
+        <tbody>
+            {% for auditoria in auditorias %}
+            <tr>
+                <td><strong class="nombre-auditoria">{{ auditoria.nombre }}</strong><span class="texto-secundario texto-pequeno">{{ auditoria.folio }}</span></td>
+                <td>{{ auditoria.herramienta }}</td>
+                <td class="sin-salto">{{ auditoria.fecha }}</td>
+                <td><span class="estado estado-{{ auditoria.color }}">{{ auditoria.estado }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

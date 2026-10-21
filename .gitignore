@@ -3,6 +3,7 @@ venv/
 .venv/
 env/
 ENV/
+riesgoT/
 
 # ==== Python ====
 __pycache__/
