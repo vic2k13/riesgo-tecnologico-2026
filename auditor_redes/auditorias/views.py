@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def historial(request):
+    return render(request, 'auditorias/historial.html')
