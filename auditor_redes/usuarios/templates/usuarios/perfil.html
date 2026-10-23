@@ -1,8 +1,134 @@
 {% extends 'base.html' %}
 
-{% block title %}Mi perfil{% endblock %}
-
 {% block content %}
-<h1 class="h3">Mi perfil</h1>
-<p class="text-muted">Configuración de tu perfil de usuario.</p>
+<!-- Contenido Principal -->
+<main class="container my-5">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="fw-bold">Mi Perfil</h1>
+            <p class="text-muted">Gestiona tu información personal, seguridad y preferencias de cuenta.</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        
+        <!-- Columna Izquierda: Foto de Perfil y Resumen -->
+        <div class="col-lg-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    
+                    <!-- Contenedor de la Foto con botón superpuesto -->
+                    <div class="position-relative mb-4">
+                        <div class="bg-primary bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white shadow" 
+                             style="width: 160px; height: 160px;">
+                            <i class="bi bi-person-fill" style="font-size: 6rem;"></i>
+                        </div>
+                        <!-- Botón flotante para editar foto -->
+                        <button type="button" class="btn btn-dark rounded-circle position-absolute bottom-0 end-0 shadow" 
+                                style="width: 45px; height: 45px; transform: translate(-10px, -10px);" 
+                                title="Actualizar foto de perfil">
+                            <i class="bi bi-camera-fill fs-5"></i>
+                        </button>
+                    </div>
+
+                    <h4 class="card-title fw-bold mb-1">Alejandro Vargas</h4>
+                    <span class="badge bg-secondary mb-3">Auditor de Red</span>
+                    
+                    <div class="w-100 mt-auto pt-4 border-top">
+                        <p class="text-muted small mb-2"><i class="bi bi-calendar-check me-1"></i> Miembro desde Ene 2024</p>
+                        <p class="text-muted small mb-0"><i class="bi bi-geo-alt me-1"></i> Zona Norte</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Formularios de Actualización -->
+        <div class="col-lg-8">
+            
+            <!-- Tarjeta de Información Personal -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4 border-bottom pb-2">
+                        <i class="bi bi-person-lines-fill me-2 text-primary"></i>Información Personal
+                    </h5>
+                    
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Nombre Completo</label>
+                                <input type="text" class="form-control bg-light" value="Alejandro Vargas" readonly>
+                                <div class="form-text" style="font-size: 0.75rem;">El nombre solo puede ser cambiado por RH.</div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Número de Celular</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="bi bi-telephone text-muted"></i></span>
+                                    <input type="tel" class="form-control" value="55 1234 5678" placeholder="Ingresa tu celular">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Correo Electrónico Corporativo</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="bi bi-envelope text-muted"></i></span>
+                                    <input type="email" class="form-control" value="a.vargas@red-empresa.com" placeholder="tu@correo.com">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Contacto de Emergencia</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="bi bi-heart-pulse text-danger"></i></span>
+                                    <input type="text" class="form-control" value="María Vargas - 55 9876 5432">
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4 text-end">
+                                <button type="button" class="btn btn-outline-secondary me-2">Cancelar</button>
+                                <button type="submit" class="btn btn-dark px-4 shadow-sm">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Seguridad y Preferencias -->
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4 border-bottom pb-2">
+                        <i class="bi bi-shield-lock-fill me-2 text-primary"></i>Seguridad y Preferencias
+                    </h5>
+                    
+                    <!-- Opción Contraseña -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h6 class="mb-1 fw-bold">Contraseña de Acceso</h6>
+                            <p class="text-muted small mb-0">Última actualización hace 3 meses.</p>
+                        </div>
+                        <button class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                            Cambiar <i class="bi bi-key ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Opción Notificaciones -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1 fw-bold">Alertas por SMS en campo</h6>
+                            <p class="text-muted small mb-0">Recibir notificaciones urgentes sobre caídas de red.</p>
+                        </div>
+                        <div class="form-check form-switch fs-4 mb-0">
+                            <input class="form-check-input shadow-sm" type="checkbox" role="switch" id="smsSwitch" checked>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
 {% endblock %}
