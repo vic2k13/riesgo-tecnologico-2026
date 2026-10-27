@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Concesionaria</title>
-    <!--  Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap / Bootswatch Tema Lux -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/lux/bootstrap.min.css">
+
 </head>
 <body>
     <!-- Renglón A: Navegación Superior -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
         <div class="container-fluid">
             <!-- Logo que redirecciona al inicio -->
-             <!-- Llamamos  al enlace de inicio  NOMBRE_APP : NAME -->
-            <a class="navbar-brand" href="{% url 'agencia:inicio' %}">LOGO AUTOS</a>
+            <a class="navbar-brand" href="{% url 'agencia:inicio' %}">
+                <img src="https://w7.pngwing.com/pngs/40/772/png-transparent-car-dealership-alsa-enterprises-motors-used-car-vehicle-car-blue-text-hand-thumbnail.png" alt="LOGO AUTOS" height="85">
+            </a>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
-                    <!-- El back nos manda la variable de contexto menu_a con las opciones para el menú superior -->
-                     <!-- Iteramos las opciones con un for -->
                     {% for opcion in menu_a %}
                     <li class="nav-item">
-                        <!-- Si se cumple que  opcion == servicio_activo entonces se escribe la clase de estilado active text-warning
-                         para que el usuario sepa qué opción seleccionó-->
-                        <a class="nav-link {% if opcion == servicio_activo %}
-                                                    active text-warning
-                                            {% endif %}" 
+                        <a class="nav-link {% if opcion == servicio_activo %}active text-info{% endif %}" 
                            href="{% url 'agencia:seccion' servicio=opcion %}">{{ opcion }}</a>
-                            <!-- Llamamos a la url agencia:seccion y le pasamos como parámetro el servicio para trabajarlo en el back
-                                                            NOMBRE_VAR = VALOR -->
                     </li>
                     {% endfor %}
                 </ul>
@@ -35,40 +30,23 @@
         </div>
     </nav>
 
-
-
-
-
     <!-- Cuerpo principal -->
     <div class="container-fluid mt-4">
         <div class="row">
             <!-- Columna B: Submenú Dinámico -->
             <div class="col-md-2">
-                
-                <!-- Si hay subtemas/opciones_b entonces las mostramos -->
                 {% if opciones_b %}
                     <div class="list-group">
-
-                        <!-- Iteramos sobre subtemas/opciones para mostrarlas -->
                         {% for subtema in opciones_b %}
-                            <!-- Creamos la url para el subtema y así acceder a este. También dentro del if definimos
-                             el comportamiento para cuando se selecciona el subtema   -->
                             <a href="{% url 'agencia:detalle' servicio=servicio_activo subtema=subtema %}" 
                             class="list-group-item list-group-item-action {% if subtema == subtema_activo %}active{% endif %}">
                                 {{ subtema }}
                             </a>
-
                         {% endfor %}
-
                     </div>
-
                 {% else %}
-                    <!-- En otro caso mostramos este mensaje -->
                     <p class="text-muted">Seleccione algún servicio del menú superior.</p>
-
                 {% endif %}
-
-
             </div>
 
             <!-- Contenido Principal -->
