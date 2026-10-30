@@ -1,0 +1,37 @@
+<div class="encabezado-seccion">
+    <div>
+        <p class="antetitulo">{{ equipo_nombre|upper }}</p>
+        <h1>Mi equipo</h1>
+        <p class="descripcion">Conoce a los integrantes de tu equipo de trabajo.</p>
+    </div>
+    <span class="estado estado-azul">{{ integrantes|length }} integrantes</span>
+</div>
+<section id="responsable" class="responsable-destacado">
+    <span class="avatar avatar-violeta avatar-grande"><svg class="icono" aria-hidden="true"><use href="#icono-usuario"></use></svg></span>
+    <div>
+        <span class="antetitulo">AUDITOR RESPONSABLE</span>
+        <h2>Por asignar</h2>
+        <p>Aún no se ha indicado quién será el responsable del equipo.</p>
+    </div>
+    <span class="estado estado-amarillo">Pendiente</span>
+</section>
+<section id="integrantes" class="bloque">
+    <div class="titulo-bloque">
+        <h2>Integrantes</h2>
+        <span class="texto-secundario texto-pequeno">Tu equipo de trabajo</span>
+    </div>
+    <div class="rejilla-dos">
+        {% for integrante in integrantes %}
+        <article class="tarjeta integrante">
+            <div class="integrante-cabecera">
+                <span class="avatar avatar-{{ integrante.tono }} avatar-grande">{{ integrante.iniciales }}</span>
+                {% if integrante.correo == usuario_panel.correo %}<span class="estado estado-azul">Tú</span>{% endif %}
+            </div>
+            <h3>{{ integrante.nombre }}</h3>
+            <p class="texto-secundario">{% if integrante.correo == usuario_panel.correo %}Auditor JR{% else %}Integrante{% endif %}</p>
+            <p class="correo-integrante">{{ integrante.correo }}</p>
+            <div class="integrante-pie">{{ equipo_nombre }}</div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
